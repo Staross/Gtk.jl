@@ -332,6 +332,7 @@ id = signal_connect((widget, event) -> cb_buttonpressed(widget, event, guistate,
 
 Finally, in some situations you may want or need to use an [approach that is more analagous to julia's `cfunction` callback syntax](doc/more_signals.md).
 One advantage of this alternative approach is that, in cases of error, the backtraces are much more informative.
+In the current version callbacks can sometimes cause a segmentation fault, you can use this alternative syntax as a workaround. See this [issue](https://github.com/JuliaLang/Gtk.jl/issues/161).
 
 ### Usage without the REPL
 
